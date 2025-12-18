@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >= 3.10
+    - python {{ python_min }}
     - pytest-runner
     - pip
     - setuptools
   run:
-    - python >= 3.10
+    - python >={{ python_min }}
     - varint >=1.0.2,<2.0.0
 
 test:
