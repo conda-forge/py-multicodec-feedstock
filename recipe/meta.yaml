@@ -16,15 +16,13 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >= 3.10
     - pytest-runner
     - pip
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python >= 3.10
     - varint >=1.0.2,<2.0.0
-    - six >=1.10.0,<2.0
-    - morphys >=1.0,<2.0
 
 test:
   imports:
