@@ -1,13 +1,13 @@
 {% set name = "py-multicodec" %}
-{% set version = "0.2.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/py-multicodec-{{ version }}.tar.gz
-  sha256: 83021ffe8c0e272d19b5b86bc5b39efa67c8e9f4735ce6cafdbc1ace767ec647
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 78e4e3e47b6288cf635c3ca987152e6cb5510bdcdab307e7690c76ec3d5bbfeb
 
 build:
   noarch: python
@@ -23,8 +23,6 @@ requirements:
   run:
     - python >={{ python_min }}
     - varint >=1.0.2,<2.0.0
-    - six >=1.10.0,<2.0
-    - morphys >=1.0,<2.0
 
 test:
   imports:
